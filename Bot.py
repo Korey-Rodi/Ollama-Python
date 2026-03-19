@@ -3,7 +3,12 @@ import ollama
 print("I am a locally hosted AI chat bot...")
 text = input("What can I help you with? \n")
 
-response = ollama.chat(model='mistral', messages = [
+instructions = [
+    {'role': 'system', 'content': "You are a AI chatbot, always be kind and thorough with your responses."
+    },
+]
+
+response = ollama.chat(model='mistral', messages = instructions + [
     {
         'role': 'user',
         'content': text,
