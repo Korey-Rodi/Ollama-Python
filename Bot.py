@@ -1,5 +1,4 @@
 import ollama
-##this is a locally hosted version of ollama mistral AI
 print("I am a locally hosted AI chat bot...")
 text = input("What can I help you with? \n")
 
